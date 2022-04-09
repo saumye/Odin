@@ -23,7 +23,7 @@ tasks.register("templateCleanup") {
         }
 
         file("settings.gradle.kts").replace(
-            "rootProject.name = (\"kotlin-android-template\")",
+            "rootProject.name = (\"odin\")",
             "rootProject.name = (\"$name\")"
         )
         file("buildSrc/src/main/java/Coordinates.kt").replace(
@@ -32,14 +32,14 @@ tasks.register("templateCleanup") {
         )
 
         file("buildSrc/src/main/kotlin/publish.gradle.kts").apply {
-            replace("cortinico/kotlin-android-template", "$owner/$name")
-            replace("cortinico/kotlin-android-template", "$owner/$name")
-            replace("cortinico", owner)
-            replace("Nicola Corti", owner)
+            replace("saumye/odin", "$owner/$name")
+            replace("saumye/odin", "$owner/$name")
+            replace("saumye", owner)
+            replace("Saumye Srivastava", owner)
             // Keep the link to the original script
             replace(
                 "* https://github.com/$owner/$name/blob/master/buildSrc/src/main/kotlin/publish.gradle.kts",
-                "* https://github.com/cortinico/kotlin-android-template/blob/master/buildSrc/src/main/kotlin/publish.gradle.kts"
+                "* https://github.com/saumye/odin/blob/master/buildSrc/src/main/kotlin/publish.gradle.kts"
             )
         }
 

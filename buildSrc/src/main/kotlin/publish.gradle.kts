@@ -3,7 +3,7 @@ import org.gradle.api.tasks.bundling.Jar
 
 /**
  * Precompiled script plugin from:
- * https://github.com/cortinico/kotlin-android-template/blob/master/buildSrc/src/main/kotlin/publish.gradle.kts
+ * https://github.com/saumye/odin/blob/master/buildSrc/src/main/kotlin/publish.gradle.kts
  *
  * The following plugin tasks care of setting up:
  * - Publishing to Maven Central and Sonatype Snapshots
@@ -93,7 +93,7 @@ afterEvaluate {
                         version = "$version-SNAPSHOT"
                     }
                     description.set("A template for Kotlin Android projects")
-                    url.set("https://github.com/cortinico/kotlin-android-template/")
+                    url.set("https://github.com/saumye/odin/")
 
                     licenses {
                         license {
@@ -103,18 +103,18 @@ afterEvaluate {
                     }
                     developers {
                         developer {
-                            id.set("cortinico")
-                            name.set("Nicola Corti")
+                            id.set("saumye")
+                            name.set("Saumye")
                         }
                     }
                     scm {
-                        connection.set("scm:git:git://github.com/cortinico/kotlin-android-template.git")
-                        developerConnection.set("scm:git:ssh://github.com/cortinico/kotlin-android-template.git")
-                        url.set("https://github.com/cortinico/kotlin-android-template/")
+                        connection.set("scm:git:git://github.com/saumye/odin.git")
+                        developerConnection.set("scm:git:ssh://github.com/saumye/odin.git")
+                        url.set("https://github.com/saumye/odin/")
                     }
                     issueManagement {
                         system.set("GitHub Issues")
-                        url.set("https://github.com/cortinico/kotlin-android-template/issues")
+                        url.set("https://github.com/saumye/odin/issues")
                     }
                 }
             }
