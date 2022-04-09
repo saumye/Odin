@@ -9,9 +9,9 @@ appcompat = "1.4.1"
 constraint_layout = "2.1.2"
 core_ktx = "1.7.0"
 espresso_core = "3.4.0"
-compile_sdk_version = "31"
-min_sdk_version = "21"
-target_sdk_version = "31"
+compilesdk = "31"
+minsdk = "21"
+targetsdk = "31"
 dokka = "1.6.10"
 
 [libraries]
@@ -24,7 +24,7 @@ androidx_test_runner = { module = "androidx.test:runner", version.ref = "android
 androidx_test_ext_junit = { module = "androidx.test.ext:junit", version.ref = "androidx.test.ext" }
 androidx_test_ext_junit_ktx = { module = "androidx.test.ext:junit-ktx", version.ref = "androidx.test.ext" }
 espresso_core = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso.core" }
-agp = { module = "com.android.tools.build:gradle", version = "7.0.4" }
+agp = { module = "com.android.tools.build:gradle", version = "7.1.2" }
 kgp = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 dokka_gradle_plugin = { module = "org.jetbrains.dokka:dokka-gradle-plugin", version.ref = "dokka"}
 dokka_core = { module = "org.jetbrains.dokka:dokka-core", version.ref = "dokka"}

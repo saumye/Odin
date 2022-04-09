@@ -8,11 +8,11 @@ plugins {
 }
 
 android {
-    compileSdkVersion(libs.versions.compile.sdk.version.get().toInt())
+    compileSdk = libs.versions.compilesdk.get().toInt()
 
     defaultConfig {
-        minSdkVersion(libs.versions.min.sdk.version.get().toInt())
-        targetSdkVersion(libs.versions.target.sdk.version.get().toInt())
+        minSdk = libs.versions.minsdk.get().toInt()
+        targetSdk = libs.versions.targetsdk.get().toInt()
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -37,8 +37,8 @@ android {
     }
 
     lint {
-        isWarningsAsErrors = true
-        isAbortOnError = true
+        warningsAsErrors = true
+        abortOnError = true
     }
 }
 
