@@ -1,6 +1,16 @@
 plugins {
     `kotlin-dsl`
 }
+
+gradlePlugin {
+    plugins {
+        register("android-base") {
+            id = "android-base"
+            implementationClass = "io.instance.odin.AndroidModulePlugin"
+        }
+    }
+}
+
 repositories {
     google()
     mavenCentral()

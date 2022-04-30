@@ -4,38 +4,11 @@ plugins {
     id("com.android.library")
     kotlin("android")
     id("maven-publish")
+    id("android-base")
     publish
 }
 
 android {
-    compileSdk = libs.versions.compilesdk.get().toInt()
-
-    defaultConfig {
-        minSdk = libs.versions.minsdk.get().toInt()
-        targetSdk = libs.versions.targetsdk.get().toInt()
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
-    }
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
-    }
-
-    buildTypes {
-        getByName("release") {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-    }
-
     lint {
         warningsAsErrors = true
         abortOnError = true

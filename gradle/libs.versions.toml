@@ -12,9 +12,6 @@ appcompat = "1.4.1"
 constraint_layout = "2.1.2"
 core_ktx = "1.7.0"
 espresso_core = "3.4.0"
-compilesdk = "31"
-minsdk = "21"
-targetsdk = "31"
 dokka = "1.6.10"
 
 [libraries]
