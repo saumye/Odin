@@ -18,7 +18,7 @@ android {
         viewBinding = true
         compose = true
     }
-// Set both the Java and Kotlin compilers to target Java 8.
+    // Set both the Java and Kotlin compilers to target Java 8.
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
                 targetCompatibility = JavaVersion.VERSION_1_8
