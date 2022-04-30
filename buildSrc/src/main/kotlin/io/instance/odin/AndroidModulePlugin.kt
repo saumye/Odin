@@ -16,7 +16,6 @@ class AndroidModulePlugin : Plugin<Project> {
                 defaultConfig {
                     minSdk = 21
                     targetSdk = 31
-                    applicationId = AppCoordinates.APP_ID
                     versionCode = AppCoordinates.APP_VERSION_CODE
                     versionName = AppCoordinates.APP_VERSION_NAME
                     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"

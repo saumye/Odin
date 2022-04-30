@@ -5,35 +5,18 @@ plugins {
 }
 
 android {
-//    compileSdk = libs.versions.compilesdk.get().toInt()
-//    defaultConfig {
-//        minSdk = libs.versions.minsdk.get().toInt()
-//        targetSdk = libs.versions.targetsdk.get().toInt()
-//
-//        applicationId = AppCoordinates.APP_ID
-//        versionCode = AppCoordinates.APP_VERSION_CODE
-//        versionName = AppCoordinates.APP_VERSION_NAME
-//        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-//    }
     buildFeatures {
         viewBinding = true
         compose = true
     }
-    // Set both the Java and Kotlin compilers to target Java 8.
-//    compileOptions {
-//        sourceCompatibility = JavaVersion.VERSION_1_8
-//                targetCompatibility = JavaVersion.VERSION_1_8
-//    }
-//    kotlinOptions {
-//        jvmTarget = "1.8"
-//    }
+    defaultConfig.applicationId = AppCoordinates.APP_ID
 
     composeOptions {
         kotlinCompilerExtensionVersion = "1.1.1"
     }
 
     buildTypes {
-        release {
+        getByName("release") {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
