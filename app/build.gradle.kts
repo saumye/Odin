@@ -16,14 +16,21 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        compose = true
     }
+// Set both the Java and Kotlin compilers to target Java 8.
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_1_8
+                targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
+        jvmTarget = "1.8"
     }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.1.1"
+    }
+
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
@@ -59,6 +66,12 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.constraint.layout)
     implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.compose.activity)
+    implementation(libs.androidx.compose.material)
+    implementation(libs.androidx.compose.animation)
+    implementation(libs.androidx.compose.lifecycle.viewmodel)
+    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.foundation)
 
     testImplementation(libs.junit)
 
