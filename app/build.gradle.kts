@@ -6,7 +6,6 @@ plugins {
 
 android {
     buildFeatures {
-        viewBinding = true
         compose = true
     }
     defaultConfig.applicationId = AppCoordinates.APP_ID
@@ -21,29 +20,10 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
-
-    lint {
-        warningsAsErrors = true
-        abortOnError = true
-    }
-
-    // Use this block to configure different flavors
-//    flavorDimensions("version")
-//    productFlavors {
-//        create("full") {
-//            dimension = "version"
-//            applicationIdSuffix = ".full"
-//        }
-//        create("demo") {
-//            dimension = "version"
-//            applicationIdSuffix = ".demo"
-//        }
-//    }
 }
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
-
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.constraint.layout)
     implementation(libs.androidx.core.ktx)

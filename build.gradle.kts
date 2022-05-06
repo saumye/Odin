@@ -35,7 +35,7 @@ subprojects {
     }
 
     detekt {
-        config = rootProject.files("config/detekt/detekt.yml")
+        config = rootProject.files("tools/detekt/detekt.yml")
         reports {
             html {
                 enabled = true
