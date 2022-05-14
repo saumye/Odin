@@ -1,12 +1,10 @@
-import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
-
+@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
     id("com.android.application") apply false
     id("com.android.library") apply false
     kotlin("android") apply false
     alias(libs.plugins.detekt)
     alias(libs.plugins.ktlint)
-    alias(libs.plugins.versions)
     base
 }
 
@@ -38,17 +36,9 @@ subprojects {
         config = rootProject.files("tools/detekt/detekt.yml")
         reports {
             html {
-                enabled = true
-                destination = file("build/reports/detekt.html")
+                required.set(true)
+                outputLocation.set(file("build/reports/detekt.html"))
             }
-        }
-    }
-}
-
-tasks {
-    withType<DependencyUpdatesTask>().configureEach {
-        rejectVersionIf {
-            candidate.version.isStableVersion().not()
         }
     }
 }

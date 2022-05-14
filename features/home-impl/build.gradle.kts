@@ -1,22 +1,10 @@
-version = LibraryAndroidCoordinates.LIBRARY_VERSION
-
 plugins {
     id("com.android.library")
-    kotlin("android")
-    id("maven-publish")
     id("android-base")
-    publish
-}
-
-android {
-    lint {
-        warningsAsErrors = true
-        abortOnError = true
-    }
+    kotlin("android")
 }
 
 dependencies {
-    implementation(kotlin("stdlib-jdk8"))
 
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.core.ktx)

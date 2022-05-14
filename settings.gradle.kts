@@ -28,8 +28,4 @@ rootProject.name = ("odin")
 enableFeaturePreview("VERSION_CATALOGS")
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
-include(
-    "app",
-    "library-android",
-    "home"
-)
+include("app", ":features:home-impl", ":features:home", ":features:login", ":features:login-impl")

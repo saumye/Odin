@@ -23,7 +23,6 @@ android {
 }
 
 dependencies {
-    implementation(kotlin("stdlib-jdk8"))
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.constraint.layout)
     implementation(libs.androidx.core.ktx)
@@ -35,7 +34,8 @@ dependencies {
     implementation(libs.androidx.compose.foundation)
 
     testImplementation(libs.junit)
-
+    implementation(project(":features:home"))
+    implementation(project(":features:login"))
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.androidx.test.ext.junit.ktx)
     androidTestImplementation(libs.androidx.test.rules)

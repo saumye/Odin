@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
                 Text(
                     text = "Click to see dialog", modifier = Modifier.padding(16.dp),
                     style = TextStyle(
-                        fontSize = 16.sp,
+                        fontSize = 20.sp,
                         fontFamily = FontFamily.Serif
                     )
                 )
